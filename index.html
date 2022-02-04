@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montani</title>
+
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="app">
+        <header class="app-header">
+            <nav class="nav">
+                <a href="#" class="nav-logo">
+                    <img src="./montani-logo.png" alt="Montani logo">
+                </a>
+
+                <div class="nav-links">
+                    <a href="#">ABOUT</a>
+                    <a href="#">OUR WORK</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">JOBS</a>
+                    <a href="#" class="btn btn-primary">JOIN US!</a>
+                </div>
+
+                <a class="nav-menu" href="javascript:void(0)">
+                    <svg class="menu-open" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                        height="50px" viewBox="0 0 24 24" width="50px" fill="#000000">
+                        <path d="M0,0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M3,18h13v-2H3V18z M3,13h10v-2H3V13z M3,6v2h13V6H3z M21,15.59L17.42,12L21,8.41L19.59,7l-5,5l5,5L21,15.59z" />
+                    </svg>
+
+                    <svg class="menu-close" xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 0 24 24" width="50px"
+                        fill="#000000">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                    </svg>
+                </a>
+            </nav>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+
+                <h5>Donec sed lectus enim. Pellentesque vitae hendrerit elit, cursus rhoncus justo. Integer massa ante,
+                    placerat at nulla sed</h5>
+
+                <div class="form-group">
+                    <input type="email" name="email" class="form-input" placeholder="Enter your Email Address">
+
+                    <button type="submit" class="btn btn-primary">Notify me!</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let triggerMenuCounter = 0
+        const navMenu = document.querySelectorAll('.nav-menu').forEach(navMenu => {
+            navMenu.addEventListener('click', (event) => {
+                triggerMenuCounter % 2 === 0
+                    ? event.target.closest('body').classList.add('nav-menu-clicked')
+                    : event.target.closest('body').classList.remove('nav-menu-clicked')
+                triggerMenuCounter++
+            })
+        })
+    </script>
+</body>
+
+</html>

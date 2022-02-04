@@ -1,0 +1,185 @@
+/* ROBOTO FONT */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "./variables";
+
+/* UTILITIES */
+@import "./utils";
+
+/* BASE STYLINGS */
+@import "./headers";
+@import "./inputs";
+@import "./buttons";
+@import "./navbars";
+
+html,
+body,
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.5;
+    font-size: 62.5%;
+    font-family: $mainFont;
+    color: initial;
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.app-header,
+.hero-section {
+    background-color: $secondary;
+}
+.section-header,
+.hero-section-message {
+    p {
+        font-size: 2rem;
+    }
+}
+
+.nav-menu-clicked {
+    position: relative;
+    overflow: hidden;
+    .app-header {
+        nav {
+            @include vstack;
+            align-items: center;
+            position: fixed;
+            overflow-y: auto;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            .nav-links {
+                @include vstack;
+            }
+
+            .nav-menu {
+                position: fixed;
+                right: 5rem;
+                top: 5rem;
+                .menu-open {
+                    display: none;
+                }
+                .menu-close {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.app-header {
+    nav {
+        @include hstack;
+        justify-content: space-between;
+        margin: 0 auto;
+        // padding: 8rem 0;
+        padding: 5rem 1rem;
+        // max-width: 110rem;
+        background-color: inherit;
+
+        a {
+            color: $white;
+        }
+
+        .nav-logo {
+
+        }
+
+        .nav-links {
+            @include hstack;
+            display: none;
+        }
+
+        .nav-menu {
+            // font-size: 5rem;
+        }
+        .menu-open {
+            display: block;
+        }
+        .menu-close {
+            display: none;
+        }
+
+        .btn.btn-primary {
+            background-color: $primary;
+            color: $secondary;
+            &:hover {
+                background-color: lighten($primary, 5);
+                box-shadow: 0px 15px 20px darken($secondary, 3);
+                transform: translateY(-7px);
+            }
+        }
+    }
+}
+
+.hero-section {
+    padding: 5rem 0;
+    width: 100%;
+    text-align: center;
+    .hero-content {
+        padding: 0 2.4rem;
+        // width: 100rem;
+        max-width: 80rem;
+        margin: 0 auto;
+
+        h1,
+        h5 {
+            color: $white;
+        }
+        
+        h5 {
+            padding: 3rem 0;
+            line-height: 1.8;
+        }
+
+        .form-group {
+            @include vstack;
+            margin: 0 auto;
+            padding: 5rem 0;
+            // max-width: 60rem;
+
+            input,
+            button {
+                height: 8rem;
+            }
+            input {
+                // flex: 2;
+            }
+            .btn.btn-primary {
+                // flex: 1;
+                font-size: 2.2rem;
+                background-color: $primary;
+                color: $secondary;
+                &:hover {
+                    background-color: lighten($primary, 5);
+                    box-shadow: 0px 15px 20px darken($secondary, 3);
+                    transform: translateY(-7px);
+                }
+            }
+        }
+    }
+}
+
+// ipads, tablets
+@media screen and (min-width: 481px) and (max-width: 769px) {
+    // html {
+    //     font-size: 65%;
+    // }
+}
+
+// Small screens, laptops
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+// desktops, large screens
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+
+// extra large screens
+@media only screen and (min-width: 1201px) {
+}

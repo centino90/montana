@@ -1,0 +1,234 @@
+/* ROBOTO FONT */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* UTILITIES */
+/* BASE STYLINGS */
+h1 {
+  font-size: 5.3rem;
+}
+
+h5 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+input, textarea, select {
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  padding: 0 4rem 0 4rem;
+}
+
+button, .btn {
+  padding: 1.6rem 2.5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+nav a {
+  display: inline;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+nav .nav-logo img {
+  width: 16rem;
+}
+
+html,
+body,
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  line-height: 1.5;
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  color: initial;
+  -webkit-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.app-header,
+.hero-section {
+  background-color: #1B3439;
+}
+
+.section-header p,
+.hero-section-message p {
+  font-size: 2rem;
+}
+
+.nav-menu-clicked {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu-clicked .app-header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  overflow-y: auto;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.nav-menu-clicked .app-header nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+}
+
+.nav-menu-clicked .app-header nav .nav-menu {
+  position: fixed;
+  right: 5rem;
+  top: 5rem;
+}
+
+.nav-menu-clicked .app-header nav .nav-menu .menu-open {
+  display: none;
+}
+
+.nav-menu-clicked .app-header nav .nav-menu .menu-close {
+  display: block;
+}
+
+.app-header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  background-color: inherit;
+}
+
+.app-header nav a {
+  color: #fff;
+}
+
+.app-header nav .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  display: none;
+}
+
+.app-header nav .menu-open {
+  display: block;
+}
+
+.app-header nav .menu-close {
+  display: none;
+}
+
+.app-header nav .btn.btn-primary {
+  background-color: #FFEFC8;
+  color: #1B3439;
+}
+
+.app-header nav .btn.btn-primary:hover {
+  background-color: #fff6e2;
+  -webkit-box-shadow: 0px 15px 20px #162b2f;
+          box-shadow: 0px 15px 20px #162b2f;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.hero-section {
+  padding: 5rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-section .hero-content {
+  padding: 0 2.4rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.hero-section .hero-content h1,
+.hero-section .hero-content h5 {
+  color: #fff;
+}
+
+.hero-section .hero-content h5 {
+  padding: 3rem 0;
+  line-height: 1.8;
+}
+
+.hero-section .hero-content .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+.hero-section .hero-content .form-group input,
+.hero-section .hero-content .form-group button {
+  height: 8rem;
+}
+
+.hero-section .hero-content .form-group .btn.btn-primary {
+  font-size: 2.2rem;
+  background-color: #FFEFC8;
+  color: #1B3439;
+}
+
+.hero-section .hero-content .form-group .btn.btn-primary:hover {
+  background-color: #fff6e2;
+  -webkit-box-shadow: 0px 15px 20px #162b2f;
+          box-shadow: 0px 15px 20px #162b2f;
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+/*# sourceMappingURL=main.css.map */

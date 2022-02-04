@@ -1,0 +1,14 @@
+// Aligns a flex container horizontally
+@mixin hstack {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+// Aligns a flex container vertically
+@mixin vstack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
