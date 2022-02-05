@@ -48,12 +48,15 @@
         }
     }
 }
-// BASE STATE
+
+// MAIN HEADER
 .app-header {
     background-color: $secondary;
+
     nav {
         @include hstack;
         justify-content: space-between;
+        max-width: 80rem;
         margin: 0 auto;
         padding: 5rem 1rem;
         background-color: inherit;
@@ -73,19 +76,10 @@
         .menu-close {
             display: none;
         }
-
-        .btn.btn-primary {
-            background-color: $primary;
-            color: $secondary;
-            &:hover {
-                background-color: lighten($primary, 5);
-                box-shadow: $boxShadowLg;
-                transform: translateY(-7px);
-            }
-        }
     }
 }
 
+// MAIN CONTENT
 .app-content {
     section {
         & > header {
@@ -129,14 +123,9 @@
                     height: 6rem;
                 }
 
-                .btn.btn-primary {
-                    background-color: $primary;
-                    color: $secondary;
-                    &:hover {
-                        background-color: lighten($primary, 5);
-                        box-shadow: $boxShadowLg;
-                        transform: translateY(-7px);
-                    }
+                button {
+                    font-weight: bold;
+                    font-size: 1.6rem;
                 }
             }
         }
@@ -235,6 +224,8 @@
                 border-radius: 0.4rem;
                 padding: 3rem;
                 position: relative;
+                overflow: hidden;
+                cursor: pointer;
 
                 &:hover {
                     box-shadow: $boxShadowXl;
@@ -276,23 +267,11 @@
         .hiring-actions {
             padding: 5rem 0;
             text-align: center;
-
-            .btn.btn-secondary {
-                display: inline-block;
-                margin: 0 auto;
-                background-color: $secondary;
-                color: $white;
-                font-weight: 500;
-                &:hover {
-                    background-color: lighten($secondary, 5);
-                    box-shadow: $boxShadowLg;
-                    transform: translateY(-1rem);
-                }
-            }
         }
     }
 }
 
+// MAIN FOOTER
 .app-footer {
     background-color: $secondary;
     padding: 10rem 1rem;
