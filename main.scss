@@ -6,40 +6,16 @@
 /* UTILITIES */
 @import "./utils";
 
+/* GLOBAL STYLINGS */
+@import "./globals";
+
 /* BASE STYLINGS */
 @import "./headers";
 @import "./inputs";
 @import "./buttons";
 @import "./navbars";
 
-html,
-body,
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    line-height: 1.5;
-    font-size: 62.5%;
-    font-family: $mainFont;
-    color: initial;
-    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-
-.app-header,
-.hero-section {
-    background-color: $secondary;
-}
-.section-header,
-.hero-section-message {
-    p {
-        font-size: 2rem;
-    }
-}
-
+// JAVASCRIPT TOGGLED STATE
 .nav-menu-clicked {
     position: relative;
     overflow: hidden;
@@ -72,21 +48,18 @@ body,
         }
     }
 }
+// BASE STATE
 .app-header {
+    background-color: $secondary;
     nav {
         @include hstack;
         justify-content: space-between;
         margin: 0 auto;
-        // padding: 8rem 0;
         padding: 5rem 1rem;
-        // max-width: 110rem;
         background-color: inherit;
 
         a {
             color: $white;
-        }
-
-        .nav-logo {
         }
 
         .nav-links {
@@ -94,9 +67,6 @@ body,
             display: none;
         }
 
-        .nav-menu {
-            // font-size: 5rem;
-        }
         .menu-open {
             display: block;
         }
@@ -109,61 +79,223 @@ body,
             color: $secondary;
             &:hover {
                 background-color: lighten($primary, 5);
-                box-shadow: 0px 15px 20px darken($secondary, 3);
+                box-shadow: $boxShadowLg;
                 transform: translateY(-7px);
             }
         }
     }
 }
 
-.hero-section {
-    padding: 5rem 0;
-    width: 100%;
-    text-align: center;
-    .hero-content {
-        padding: 0 2.4rem;
-        // width: 100rem;
-        max-width: 60rem;
-        margin: 0 auto;
+.app-content {
+    section {
+        & > header {
+            max-width: 60rem;
+            margin: 0 auto;
+            text-align: center;
 
-        h1,
-        h5 {
-            color: $white;
+            p {
+                max-width: 35rem;
+                margin: 3rem auto 0 auto;
+                line-height: 1.8;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .hero-section {
+        padding: 3rem 1rem;
+        background-color: $secondary;
+
+        header {
+            h1,
+            p {
+                color: $white;
+            }
         }
 
-        h5 {
+        .hero-content {
+            padding: 4rem 1.5rem;
+            max-width: 60rem;
             margin: 0 auto;
-            max-width: 35rem;
-            padding: 3rem 0;
-            line-height: 1.8;
-        }
+            text-align: center;
 
-        .form-group {
-            @include vstack;
-            margin: 0 auto;
-            padding: 5rem 0;
-            // max-width: 60rem;
+            .form-group {
+                @include vstack;
+                margin: 0 auto;
+                padding: 5rem 0;
 
-            input,
-            button {
-                height: 6rem;
-            }
-            input {
-                // flex: 2;
-            }
-            .btn.btn-primary {
-                // flex: 1;
-                // font-size: 2.2rem;
-                background-color: $primary;
-                color: $secondary;
-                &:hover {
-                    background-color: lighten($primary, 5);
-                    box-shadow: 0px 15px 20px darken($secondary, 3);
-                    transform: translateY(-7px);
+                input,
+                button {
+                    height: 6rem;
+                }
+
+                .btn.btn-primary {
+                    background-color: $primary;
+                    color: $secondary;
+                    &:hover {
+                        background-color: lighten($primary, 5);
+                        box-shadow: $boxShadowLg;
+                        transform: translateY(-7px);
+                    }
                 }
             }
         }
     }
+
+    .companies-section {
+        background-color: $white;
+        max-width: 77rem;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+        img {
+            width: 100%;
+        }
+    }
+
+    .message-section {
+        background-color: $white;
+        overflow: hidden;
+        display: flex;
+        max-width: 100rem;
+        margin: 0 auto;
+        border-radius: 0.7rem;
+
+        .message-img-wrapper {
+            background-color: red;
+            display: none;
+            flex: 1;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .message-content {
+            @include vstack;
+            align-items: center;
+            flex: 1;
+            background-color: lighten($primary, 6.5);
+            padding: 3rem 4rem;
+
+            h1,
+            article {
+                max-width: 35rem;
+            }
+            h1 {
+                font-size: 3.2rem;
+            }
+            article {
+                border-left: 3px solid $black;
+                padding: 0.5rem 0 0.5rem 2rem;
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                footer {
+                    margin-top: 1rem;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    font-style: italic;
+                    font-weight: bold;
+                    color: lighten($black, 25);
+                }
+            }
+        }
+    }
+
+    .hiring-section {
+        background-color: $white;
+        background-image: url(./assets/images/overlays/shiny.svg);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 4rem 1rem;
+
+        header {
+            padding: 2rem 0;
+            h1 {
+                color: $secondary;
+            }
+        }
+
+        .hiring-cards {
+            @include hstack;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            max-width: 70rem;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+
+            & > .hiring-card {
+                flex: 100%;
+                background-color: $white;
+                box-shadow: $boxShadowSm;
+                border-radius: 0.4rem;
+                padding: 3rem;
+                position: relative;
+
+                &:hover {
+                    box-shadow: $boxShadowXl;
+                    .card-img {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                .card-content {
+                    @include vstack;
+                    gap: 1rem;
+
+                    .hiring-tags {
+                        @include hstack;
+                        gap: 1.5rem;
+
+                        li {
+                            span {
+                                color: lighten($black, 60);
+                            }
+                        }
+                    }
+                }
+
+                .card-img {
+                    opacity: 0;
+                    transform: translateX(5rem);
+                    margin: 0 0 0 auto;
+                    width: 2.3rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .hiring-actions {
+            padding: 5rem 0;
+            text-align: center;
+
+            .btn.btn-secondary {
+                display: inline-block;
+                margin: 0 auto;
+                background-color: $secondary;
+                color: $white;
+                font-weight: 500;
+                &:hover {
+                    background-color: lighten($secondary, 5);
+                    box-shadow: $boxShadowLg;
+                    transform: translateY(-1rem);
+                }
+            }
+        }
+    }
+}
+
+.app-footer {
+    background-color: $secondary;
+    padding: 10rem 1rem;
 }
 
 // ipads, tablets
@@ -172,10 +304,12 @@ body,
         font-size: 70%;
     }
 
-    .hero-section {
-        .hero-content {
-            .form-group {
-                max-width:  40rem;
+    .app-content {
+        .hero-section {
+            .hero-content {
+                .form-group {
+                    max-width: 40rem;
+                }
             }
         }
     }
@@ -187,20 +321,27 @@ body,
         font-size: 75%;
     }
 
-    .hero-section {
-        .hero-content {
-            h5 {
-                max-width: 42rem;
-            }
-            .form-group {
-                flex-direction: row;
-                max-width:  45rem;
+    .app-content {
+        .hero-section {
+            .hero-content {
+                .form-group {
+                    flex-direction: row;
+                    max-width: 45rem;
 
-                input {
-                    flex: 2;
+                    input {
+                        flex: 2;
+                    }
+                    button {
+                        flex: 1;
+                    }
                 }
-                button {
-                    flex: 1;
+            }
+        }
+
+        .hiring-section {
+            .hiring-cards {
+                & > .hiring-card {
+                    flex: 45%;
                 }
             }
         }
@@ -213,11 +354,17 @@ body,
         font-size: 85%;
     }
 
+    .btn {
+        padding: 1.1rem 1.8rem;
+        font-size: 1.3rem;
+    }
+
     .nav-menu-clicked {
         position: unset;
         overflow: auto;
     }
-    .nav-menu-clicked .app-header, .app-header {
+    .nav-menu-clicked .app-header,
+    .app-header {
         nav {
             flex-direction: row;
             justify-content: space-between;
@@ -235,13 +382,8 @@ body,
                 flex-direction: row;
             }
 
-            .nav-logo img  {
+            .nav-logo img {
                 width: 100%;
-            }
-
-            .btn.btn-primary {
-                padding: 1.1rem 1.8rem;
-                font-size: 1.3rem;
             }
 
             .nav-menu {
@@ -250,12 +392,27 @@ body,
         }
     }
 
-    .hero-section {
-        .hero-content {
-            h5 {                
-                font-size: 1.4rem;
-                font-weight: bold;
-                max-width: 49rem;
+    .app-content {
+        section {
+            & > header {
+                h1 {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    max-width: 47rem;
+                    margin: 3rem auto 0 auto;
+                }
+            }
+        }
+
+        .companies-section {
+            padding: 7rem 2rem;
+        }
+        .message-section {
+            .message-img-wrapper {
+                display: block;
             }
         }
     }
