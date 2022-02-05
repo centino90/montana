@@ -3,18 +3,18 @@
 /* UTILITIES */
 /* BASE STYLINGS */
 h1 {
-  font-size: 5.3rem;
+  font-size: 4rem;
 }
 
 h5 {
-  font-size: 2.3rem;
+  font-size: 1.7rem;
   font-weight: 400;
 }
 
 input, textarea, select {
   border: none;
   border-radius: 1rem;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   padding: 0 4rem 0 4rem;
 }
 
@@ -22,20 +22,36 @@ button, .btn {
   padding: 1.6rem 2.5rem;
   font-size: 1.7rem;
   font-weight: bold;
-  border-radius: 1rem;
+  border-radius: .7rem;
   border: none;
   cursor: pointer;
 }
 
 nav a {
   display: inline;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   text-transform: uppercase;
+  position: relative;
+}
+
+nav .nav-links a:not(.btn)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  width: 0;
+  height: .5rem;
+  border-radius: .1rem;
+  background-color: #FFEFC8;
+}
+
+nav .nav-links a:not(.btn):hover::before {
+  width: 100%;
 }
 
 nav .nav-logo img {
-  width: 16rem;
+  width: 13rem;
 }
 
 html,
@@ -87,6 +103,9 @@ body,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   position: fixed;
   overflow-y: auto;
   left: 0;
@@ -111,8 +130,8 @@ body,
 
 .nav-menu-clicked .app-header nav .nav-menu {
   position: fixed;
-  right: 5rem;
-  top: 5rem;
+  right: 2rem;
+  top: 4.5rem;
 }
 
 .nav-menu-clicked .app-header nav .nav-menu .menu-open {
@@ -183,7 +202,7 @@ body,
 
 .hero-section .hero-content {
   padding: 0 2.4rem;
-  max-width: 80rem;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
@@ -193,6 +212,8 @@ body,
 }
 
 .hero-section .hero-content h5 {
+  margin: 0 auto;
+  max-width: 35rem;
   padding: 3rem 0;
   line-height: 1.8;
 }
@@ -215,11 +236,10 @@ body,
 
 .hero-section .hero-content .form-group input,
 .hero-section .hero-content .form-group button {
-  height: 8rem;
+  height: 6rem;
 }
 
 .hero-section .hero-content .form-group .btn.btn-primary {
-  font-size: 2.2rem;
   background-color: #FFEFC8;
   color: #1B3439;
 }
@@ -230,5 +250,96 @@ body,
           box-shadow: 0px 15px 20px #162b2f;
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
+}
+
+@media screen and (min-width: 481px) {
+  html {
+    font-size: 70%;
+  }
+  .hero-section .hero-content .form-group {
+    max-width: 40rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  html {
+    font-size: 75%;
+  }
+  .hero-section .hero-content h5 {
+    max-width: 42rem;
+  }
+  .hero-section .hero-content .form-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 45rem;
+  }
+  .hero-section .hero-content .form-group input {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  .hero-section .hero-content .form-group button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  html {
+    font-size: 85%;
+  }
+  .nav-menu-clicked {
+    position: unset;
+    overflow: auto;
+  }
+  .nav-menu-clicked .app-header nav, .app-header nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: unset;
+    width: 100%;
+    height: auto;
+  }
+  .nav-menu-clicked .app-header nav a, .app-header nav a {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .nav-menu-clicked .app-header nav .nav-links, .app-header nav .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav-menu-clicked .app-header nav .nav-logo img, .app-header nav .nav-logo img {
+    width: 100%;
+  }
+  .nav-menu-clicked .app-header nav .btn.btn-primary, .app-header nav .btn.btn-primary {
+    padding: 1.1rem 1.8rem;
+    font-size: 1.3rem;
+  }
+  .nav-menu-clicked .app-header nav .nav-menu, .app-header nav .nav-menu {
+    display: none;
+  }
+  .hero-section .hero-content h5 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    max-width: 49rem;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  html {
+    font-size: 92%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
