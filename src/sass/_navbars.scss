@@ -7,20 +7,40 @@ nav {
     }
 
     .nav-links a:not(.btn) {
+        white-space: nowrap;
+        padding: 0 .5rem;
 
         &::before {
             content: '';
+            transition: unset !important;
             position: absolute;
             left: 0;
-            bottom: -.5rem;
-            width: 0;
-            height: .25rem;
+            bottom: 0;
+            width: 100%;
+            height: 0;
             border-radius: .1rem;
-            background-color: $primary;    
+            background-color: $primary;  
+            opacity: 1;  
         }
 
-        &:hover::before {
-            width: 100%;
+        &:hover {
+            // background-color: lighten($primary, 5);
+            // box-shadow: $boxShadowLg;
+            // transform: translateY(-3px);
+            &::before {
+                height: 100%;
+                opacity: .4; 
+            } 
+        }
+    }
+
+    .nav-socials {
+        @include hstack;
+        justify-content: center;
+        align-items: center;
+
+        a:not(.btn) {
+            width: 1rem;
         }
     }
 }

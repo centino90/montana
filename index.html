@@ -1,8 +1,3 @@
-<!-- ---
-  layout: main
-  title: Montani
---- -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montani | Homepage</title>
-
-    <!-- {% seo %} -->
 
     <meta name="google-site-verification" content="f6d3iBAJF4nwOgbS6pvlDToc4q5AxKi60ZxVRdx6vsU" />
 
@@ -31,61 +24,7 @@
     <meta name="twitter:site" content="@Anthon35753168" />
     <meta name="twitter:creator" content="@Anthon35753168" />
 
-    <!--  Non-Essential, But Required for Analytics -->
-    <!-- <meta property="fb:app_id" content="your_app_id" />
-    <meta name="twitter:site" content="@website-username"> -->
-
     <link rel="stylesheet" href="./assets/styles/main.min.css">
-
-    <!--LocalBusiness Schema-->
-    <!-- <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Montani",
-          "description": "Offering jobs for interested applicants.",
-          "openingHours": [
-               "Mo-Sa 11:00-14:30",
-               "Mo-Th 17:00-21:30",
-               "Fr-Sa 17:00-22:00"
-          ],
-          "hasMap": "https://maps.google.com/maps?cid=11059592044807849610",
-          "image": "https://centino90.github.io/montani/assets/images/montani/montani.jpg",
-          "@id": "https://centino90.github.io/montani/",
-          "url": "https://centino90.github.io/montani/",
-          "telephone": "253423231",
-          "geo": { "@type": "GeoCoordinates", "latitude": "**51.1294671**", "longitude": "**5.503666599999974**" },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "**111 HWY 222**",
-            "addressLocality": "**Mayflower**",
-            "addressRegion": "**AR**",
-            "postalCode": "**72211**",
-            "addressCountry": "**US**"
-          },
-          "sameAs": [
-               "**https://www.facebook.com/NameOfYourPage**",
-               "**https://twitter.com/NameOfYourPage**",
-               "**https://www.instagram.com/NameOfYourPage**"
-       ],
-          "aggregateRating": { "@type": "AggregateRating", "reviewCount": 22, "ratingCount": 22, "bestRating": 10, "worstRating": 1, "ratingValue": **8.90** },
-            "review": [
-                {
-                    "@type": "Review",
-                    "author": { "@type": "Person", "name": "**Name Surname**" },
-                    "reviewBody": "**Wij hebben genoten vorig jaar herfst, volgende week gaan wij naar naar Port Zelande.**",
-                    "reviewRating": { "@type": "Rating", "bestRating": 10, "worstRating": 1, "ratingValue": **9** }
-                },
-                {
-                    "@type": "Review",
-                    "author": { "@type": "Person", "name": "**Name Surname**" },
-                    "reviewBody": "**Center Parcs is het meest kindvriendelijke park, waar vakantie echt is**",
-                    "reviewRating": { "@type": "Rating", "bestRating": 10, "worstRating": 1, "ratingValue": **10** }
-                }
-            ]          
-        }
-        </script>     -->
-    
     
         <!--BreadcrumbList Schema-->
         <script type="application/ld+json"> 
@@ -161,235 +100,274 @@
 </head>
 
 <body>
-    <header class="app-header">
-        <nav class="app-nav">
-            <a href="./" class="nav-logo">
-                <img src="./assets/images/montani/montani-logo.png" alt="Montani logo">
-            </a>
-
-            <ul class="nav-links">
-                <li>
-                    <a href="./about.html">ABOUT</a>
-                </li>
-                <li>
-                    <a href="./our-work.html">OUR WORK</a>
-                </li>
-                <li>
-                    <a href="./blog.html">BLOG</a>
-                </li>
-                <li>
-                    <a href="./jobs.html">JOBS</a>
-                </li>
-                <li>
-                    <div>
-                        <a href="./join-us.html" class="btn btn-primary">JOIN US!</a>
-                    </div>
-                </li>
-            </ul>
-
-            <a class="nav-menu" href="javascript:void(0)">
-                <img class="menu-open" src="./assets/images/icons/menu-open.svg" alt="menu open icon">
-
-                <!-- hidden by default -->
-                <img class="menu-close" src="./assets/images/icons/close.svg" alt="menu close icon">
-            </a>
-        </nav>
-    </header>
-
-    <main class="app-content">
-        <section class="hero-section">
-            <header>
-                <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-                <p>
-                    Donec sed lectus enim. Pellentesque vitae hendrerit elit, cursus rhoncus justo. Integer massa ante,
-                    placerat at nulla sed
-                </p>
-            </header>
-
-            <div class="hero-content">
-                <form onclick="event.preventDefault()">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-input" placeholder="Enter your Email Address">
-
-                        <button type="submit" class="btn btn-primary">Notify me!</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <section class="companies-section">
-            <img src="./assets/images/cards/companies.webp"
-                alt="logos of acquainted companies: REV365, BBA CORP, Indaba, VALORE BOOKS">
-        </section>
-
-        <!-- ? still not clear if this section is talks about an independent or external content -->
-        <section class="message-section">
-            <div class="message-img-wrapper">
-                <img src="./assets/images/cards/card-message.webp"
-                    alt="Card message image: A smiling person on his laptop">
-            </div>
-
-            <div class="message-content">
-                <h1>
-                    Quis ultrices massa
-                    quam nec lacus.
-                </h1>
-
-                <article>
-                    <p>
-                        Sed sit amet tellus quis est convallis porttitor. Nam
-                        ullamcorper metus id turpis fermentum suscipit.
-                        Pellentesque ut elit non nisl aliquet dignissim et a
-                        ipsum. Nullam posuere velit efficitur,
-                    </p>
-
-                    <footer>Mauris Condimentum Tellus Nec</footer>
-                </article>
-            </div>
-        </section>
-
-        <section class="hiring-section">
-            <header>
-                <h1>We are hiring!</h1>
-                <p>
-                    Donec sed lectus enim. Pellentesque vitae hendrerit elit, cursus rhoncus
-                    justo. Integer massa ante, placerat at nulla sed
-                </p>
-            </header>
-
-            <ul class="hiring-cards">
-                <li class="hiring-card">
-                    <div class="card-content">
-                        <h2>Ruby on Rails Developer</h2>
-
-                        <ul class="hiring-tags">
-                            <li>
-                                <img src="./assets/images/icons/location.svg" alt="location icon">
-                                <span>Remote position</span>
-                            </li>
-                            <li>
-                                <img src="./assets/images/icons/clock.svg" alt="clock icon">
-                                <span>Full time</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-img">
-                        <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
-                    </div>
-                </li>
-
-                <li class="hiring-card">
-                    <div class="card-content">
-                        <h2>Ruby on Rails Developer</h2>
-
-                        <ul class="hiring-tags">
-                            <li>
-                                <img src="./assets/images/icons/location.svg" alt="location icon">
-                                <span>Remote position</span>
-                            </li>
-                            <li>
-                                <img src="./assets/images/icons/clock.svg" alt="clock icon">
-                                <span>Full time</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-img">
-                        <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
-                    </div>
-                </li>
-
-                <li class="hiring-card">
-                    <div class="card-content">
-                        <h2>Ruby on Rails Developer</h2>
-
-                        <ul class="hiring-tags">
-                            <li>
-                                <img src="./assets/images/icons/location.svg" alt="location icon">
-                                <span>Remote position</span>
-                            </li>
-                            <li>
-                                <img src="./assets/images/icons/clock.svg" alt="clock icon">
-                                <span>Full time</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-img">
-                        <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
-                    </div>
-                </li>
-
-                <li class="hiring-card">
-                    <div class="card-content">
-                        <h2>Ruby on Rails Developer</h2>
-
-                        <ul class="hiring-tags">
-                            <li>
-                                <img src="./assets/images/icons/location.svg" alt="location icon">
-                                <span>Remote position</span>
-                            </li>
-                            <li>
-                                <img src="./assets/images/icons/clock.svg" alt="clock icon">
-                                <span>Full time</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-img">
-                        <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
-                    </div>
-                </li>
-
-                <li class="hiring-card">
-                    <div class="card-content">
-                        <h2>Ruby on Rails Developer</h2>
-
-                        <ul class="hiring-tags">
-                            <li>
-                                <img src="./assets/images/icons/location.svg" alt="location icon">
-                                <span>Remote position</span>
-                            </li>
-                            <li>
-                                <img src="./assets/images/icons/clock.svg" alt="clock icon">
-                                <span>Full time</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-img">
-                        <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
-                    </div>
-                </li>
-
-                <li class="hiring-card">
-                    <div class="card-content">
-                        <h2>Ruby on Rails Developer</h2>
-
-                        <ul class="hiring-tags">
-                            <li>
-                                <img src="./assets/images/icons/location.svg" alt="location icon">
-                                <span>Remote position</span>
-                            </li>
-                            <li>
-                                <img src="./assets/images/icons/clock.svg" alt="clock icon">
-                                <span>Full time</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card-img">
-                        <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
-                    </div>
-                </li>
-            </ul>
-
-            <div class="hiring-actions">
-                <a href="#" class="btn btn-secondary">
-                    View All Openings
+    <div id="root" class="home">
+        <header class="app-header">
+            <nav class="app-nav">
+                <a href="./" class="nav-logo">
+                    <img src="./assets/images/montani/montani-logo.png" alt="Montani logo">
                 </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="app-footer">
-
-    </footer>
+    
+                <ul class="nav-links">
+                    <li>
+                        <a href="./about.html">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="./our-work.html">OUR WORK</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="./jobs.html">JOBS</a>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="./join-us.html" class="btn btn-primary">JOIN US!</a>
+                        </div>
+                    </li>
+                </ul>
+    
+                <a class="nav-menu" href="javascript:void(0)">
+                    <img class="menu-open" src="./assets/images/icons/menu-open.svg" alt="menu open icon">
+    
+                    <!-- hidden by default -->
+                    <img class="menu-close" src="./assets/images/icons/close.svg" alt="menu close icon">
+                </a>
+            </nav>
+        </header>
+    
+        <main class="app-content">
+            <section class="hero-section section-lg">
+                <header>
+                    <h1 class="section-mainheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                    <p class="section-paragraph">
+                        Donec sed lectus enim. Pellentesque vitae hendrerit elit, cursus rhoncus justo. Integer massa ante,
+                        placerat at nulla sed
+                    </p>
+                </header>
+    
+                <div class="hero-content">
+                    <form onclick="event.preventDefault()">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-input" placeholder="Enter your Email Address">
+    
+                            <button type="submit" class="btn btn-primary">Notify me!</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+    
+            <section class="companies-section">
+                <img src="./assets/images/cards/companies.webp"
+                    alt="logos of acquainted companies: REV365, BBA CORP, Indaba, VALORE BOOKS">
+            </section>
+    
+            <!-- ? still not clear if this section is talks about an independent or external content -->
+            <section class="message-section">
+                <div class="message-img-wrapper">
+                    <img src="./assets/images/cards/card-message.webp"
+                        alt="Card message image: A smiling person on his laptop">
+                </div>
+    
+                <div class="message-content">
+                    <h1>
+                        Quis ultrices massa
+                        quam nec lacus.
+                    </h1>
+    
+                    <article>
+                        <p>
+                            Sed sit amet tellus quis est convallis porttitor. Nam
+                            ullamcorper metus id turpis fermentum suscipit.
+                            Pellentesque ut elit non nisl aliquet dignissim et a
+                            ipsum. Nullam posuere velit efficitur,
+                        </p>
+    
+                        <footer>Mauris Condimentum Tellus Nec</footer>
+                    </article>
+                </div>
+            </section>
+    
+            <section class="hiring-section">
+                <header>
+                    <h1 class="section-mainheader">We are hiring!</h1>
+                    <p class="section-paragraph">
+                        Donec sed lectus enim. Pellentesque vitae hendrerit elit, cursus rhoncus
+                        justo. Integer massa ante, placerat at nulla sed
+                    </p>
+                </header>
+    
+                <ul class="hiring-cards">
+                    <li class="hiring-card">
+                        <div class="card-content">
+                            <h2>Ruby on Rails Developer</h2>
+    
+                            <ul class="hiring-tags">
+                                <li>
+                                    <img src="./assets/images/icons/location.svg" alt="location icon">
+                                    <span>Remote position</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/icons/clock.svg" alt="clock icon">
+                                    <span>Full time</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-img">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
+                        </div>
+                    </li>
+    
+                    <li class="hiring-card">
+                        <div class="card-content">
+                            <h2>Ruby on Rails Developer</h2>
+    
+                            <ul class="hiring-tags">
+                                <li>
+                                    <img src="./assets/images/icons/location.svg" alt="location icon">
+                                    <span>Remote position</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/icons/clock.svg" alt="clock icon">
+                                    <span>Full time</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-img">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
+                        </div>
+                    </li>
+    
+                    <li class="hiring-card">
+                        <div class="card-content">
+                            <h2>Ruby on Rails Developer</h2>
+    
+                            <ul class="hiring-tags">
+                                <li>
+                                    <img src="./assets/images/icons/location.svg" alt="location icon">
+                                    <span>Remote position</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/icons/clock.svg" alt="clock icon">
+                                    <span>Full time</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-img">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
+                        </div>
+                    </li>
+    
+                    <li class="hiring-card">
+                        <div class="card-content">
+                            <h2>Ruby on Rails Developer</h2>
+    
+                            <ul class="hiring-tags">
+                                <li>
+                                    <img src="./assets/images/icons/location.svg" alt="location icon">
+                                    <span>Remote position</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/icons/clock.svg" alt="clock icon">
+                                    <span>Full time</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-img">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
+                        </div>
+                    </li>
+    
+                    <li class="hiring-card">
+                        <div class="card-content">
+                            <h2>Ruby on Rails Developer</h2>
+    
+                            <ul class="hiring-tags">
+                                <li>
+                                    <img src="./assets/images/icons/location.svg" alt="location icon">
+                                    <span>Remote position</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/icons/clock.svg" alt="clock icon">
+                                    <span>Full time</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-img">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
+                        </div>
+                    </li>
+    
+                    <li class="hiring-card">
+                        <div class="card-content">
+                            <h2>Ruby on Rails Developer</h2>
+    
+                            <ul class="hiring-tags">
+                                <li>
+                                    <img src="./assets/images/icons/location.svg" alt="location icon">
+                                    <span>Remote position</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/icons/clock.svg" alt="clock icon">
+                                    <span>Full time</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-img">
+                            <img src="./assets/images/icons/arrow-right.svg" alt="arrow right icon">
+                        </div>
+                    </li>
+                </ul>
+    
+                <div class="hiring-actions">
+                    <a href="#" class="btn btn-secondary">
+                        View All Openings
+                    </a>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="app-footer">
+            <nav class="app-nav">
+                <div class="app-nav-left">
+                    <ul class="nav-socials">
+                        <li>
+                            <a href="#">
+                                <img  src="./assets/images/icons/twitter.svg" alt="twitter icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img  src="./assets/images/icons/instagram.svg" alt="instagram icon">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img  src="./assets/images/icons/facebook.svg" alt="facebook icon">
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <span>© 2021 Montani. All right reserved</span>
+                </div>
+    
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">CONTACT US</a>
+                    </li>
+                    <li>
+                        <a href="#">PRIVACY</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="./jobs.html">JOBS</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
 
     <script src="./assets/scripts/main.js"></script>
     <script>
