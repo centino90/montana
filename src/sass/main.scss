@@ -15,40 +15,59 @@
 @import "./buttons";
 @import "./navbars";
 
-.app-header, .app-footer, .app-content section {
+.app-header,
+.app-footer,
+.app-content section {
     padding: 0 2rem;
 }
 
 section {
-    
-    .section-mainheader {
+    header {
+        max-width: 77rem;
         margin: 0 auto;
-        max-width: 60rem;
-        text-align: center;
-    }
-    .section-subheader {
-        margin: 0 auto;
-        max-width: 52rem;
-        text-align: center;
-    }
-    .section-paragraph {
-        max-width: 34rem;
-        margin: 3rem auto 0 auto;
-        text-align: center;
-    }
-    
-    &:not(.section-lg) {
+
         .section-mainheader {
-            font-size: 2.5rem;            
+            margin: 0 auto;
+            max-width: 60rem;
+            text-align: center;
         }
         .section-subheader {
-            font-size: 1rem;
+            margin: 0 auto;
+            max-width: 52rem;
+            text-align: center;
         }
         .section-paragraph {
-            font-size: 1.3rem;
+            max-width: 34rem;
+            margin: 3rem auto 0 auto;
+            text-align: center;
         }
     }
-    
+
+    &:not(.section-lg) {
+        header {
+            .section-mainheader {
+                font-size: 2.5rem;
+                &.align-left {
+                    text-align: left !important;
+                    margin: 0;
+                }
+            }
+            .section-subheader {
+                font-size: 1rem;
+                &.align-left {
+                    text-align: left !important;
+                    margin: 0;
+                }
+            }
+            .section-paragraph {
+                font-size: 1.3rem;
+                &.align-left {
+                    text-align: left;
+                    margin: 3rem 0 0 0;
+                }
+            }
+        }
+    }
 }
 
 // JAVASCRIPT TOGGLED STATE
@@ -73,7 +92,7 @@ section {
             .nav-menu {
                 position: fixed;
                 right: 2rem;
-                top: 4.5rem;
+                top: 2.5rem;
                 .menu-open {
                     display: none;
                 }
@@ -94,7 +113,7 @@ section {
         justify-content: space-between;
         max-width: 80rem;
         margin: 0 auto;
-        padding: 5rem 0;
+        padding: 2rem 0;
         background-color: inherit;
         z-index: 100;
 
@@ -110,7 +129,7 @@ section {
             a.btn {
                 padding: 1rem 1.5rem;
                 font-size: 1.3rem;
-                margin: 0 0 0 .5rem;
+                margin: 0 0 0 0.5rem;
             }
         }
 
@@ -125,7 +144,6 @@ section {
 
 // MAIN CONTENT
 .app-content {
-
     /* HOME */
     .hero-section {
         padding: 3rem 2rem;
@@ -340,13 +358,13 @@ section {
                     font-size: 2.4rem;
                 }
 
-                p {                    
+                p {
                     margin-top: 1.5rem;
                     font-size: 1.4rem;
                     line-height: 2.2rem;
                     width: 70%;
                     background-color: #fff;
-                    opacity: .9;
+                    opacity: 0.9;
                 }
             }
 
@@ -370,7 +388,6 @@ section {
     }
 
     /* OUR WORK */
-
     .work-section {
         padding: 6rem 2rem;
         .section-nav {
@@ -383,7 +400,7 @@ section {
                 margin: 4rem 0;
 
                 li {
-                    padding: 0 .5rem;
+                    padding: 0 0.5rem;
                     text-transform: uppercase;
                     font-weight: bold;
                     text-decoration: underline;
@@ -428,17 +445,17 @@ section {
                     position: relative;
                     border-top-left-radius: 1rem;
                     border-top-right-radius: 1rem;
-                    overflow: hidden;            
+                    overflow: hidden;
                     height: 100%;
                     width: 100%;
-                    background-color: #ECECEC;
+                    background-color: #ececec;
                     display: flex;
                     justify-content: center;
                     max-height: 15rem;
                     cursor: pointer;
-                    
+
                     &::before {
-                        content: 'Click here to read more';
+                        content: "Click here to read more";
                         color: $white;
                         display: flex;
                         justify-content: center;
@@ -450,7 +467,7 @@ section {
                         top: 0;
                         background-color: darken($secondary, 5);
                         opacity: 0;
-                        transition-duration: .7s;
+                        transition-duration: 0.7s;
                         z-index: 100;
                     }
 
@@ -461,21 +478,21 @@ section {
 
                     img {
                         object-fit: cover;
-                        width: 80%; 
-                        height: 100%;     
-                        opacity: .1;                  
+                        width: 80%;
+                        height: 100%;
+                        opacity: 0.1;
                     }
                 }
 
                 &:hover {
                     box-shadow: $boxShadowLg;
 
-                    .card-img{
+                    .card-img {
                         height: 100%;
                         &::before {
-                            opacity: .8;
+                            opacity: 0.8;
                         }
-    
+
                         img {
                             width: 100%;
                         }
@@ -485,8 +502,8 @@ section {
         }
     }
 
-     /* BLOG */
-     .blogs-section {
+    /* BLOG */
+    .blogs-section {
         padding: 6rem 2rem;
         .section-nav {
             max-width: 82rem;
@@ -498,7 +515,7 @@ section {
                 margin: 4rem 0;
 
                 li {
-                    padding: 0 .5rem;
+                    padding: 0 0.5rem;
                     text-transform: uppercase;
                     font-weight: bold;
                     text-decoration: underline;
@@ -543,17 +560,17 @@ section {
                     position: relative;
                     border-top-left-radius: 1rem;
                     border-top-right-radius: 1rem;
-                    overflow: hidden;            
+                    overflow: hidden;
                     height: 100%;
                     width: 100%;
-                    background-color: #ECECEC;
+                    background-color: #ececec;
                     display: flex;
                     justify-content: center;
                     max-height: 15rem;
                     cursor: pointer;
-                    
+
                     &::before {
-                        content: 'Click here to read more';
+                        content: "Click here to read more";
                         color: $white;
                         display: flex;
                         justify-content: center;
@@ -565,7 +582,7 @@ section {
                         top: 0;
                         background-color: darken($secondary, 5);
                         opacity: 0;
-                        transition-duration: .7s;
+                        transition-duration: 0.7s;
                         z-index: 100;
                     }
 
@@ -576,21 +593,21 @@ section {
 
                     img {
                         object-fit: cover;
-                        width: 80%; 
-                        height: 100%;     
-                        opacity: .1;                  
+                        width: 80%;
+                        height: 100%;
+                        opacity: 0.1;
                     }
                 }
 
                 &:hover {
                     box-shadow: $boxShadowLg;
 
-                    .card-img{
+                    .card-img {
                         height: 100%;
                         &::before {
-                            opacity: .8;
+                            opacity: 0.8;
                         }
-    
+
                         img {
                             width: 100%;
                         }
@@ -686,7 +703,7 @@ section {
                 display: flex;
                 justify-content: end;
                 li {
-                    padding: .5rem 1rem;
+                    padding: 0.5rem 1rem;
                     border-right: 2px solid black;
                     border-top: 2px solid black;
                     border-bottom: 2px solid black;
@@ -697,7 +714,7 @@ section {
             }
         }
     }
- 
+
     /* JOIN US */
     .message-us-section {
         padding: 6rem 2rem;
@@ -715,7 +732,7 @@ section {
                     h1 {
                         font-size: 2.4rem;
                     }
-    
+
                     p {
                         margin-top: 1.5rem;
                         font-size: 1.4rem;
@@ -729,12 +746,12 @@ section {
 
                     .card-nav {
                         margin-top: 3rem;
-        
+
                         ul {
                             display: flex;
                             flex-direction: column;
                             gap: 1.3rem;
-        
+
                             li {
                                 a {
                                     text-decoration: underline;
@@ -752,7 +769,7 @@ section {
                                 gap: 2rem;
                             }
                         }
-                    }                   
+                    }
                 }
 
                 .card-content-right {
@@ -763,6 +780,81 @@ section {
                     .btn {
                         margin-top: 1rem;
                         font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    /* VIEW WORK */
+    .article-section {
+        padding: 6rem 2rem;
+
+        & > div {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: start;
+            gap: 4rem;
+            max-width: 80rem;
+            margin: 0 auto;
+        }
+
+        article {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 0 3rem 0;
+
+            h1 {
+                // border: 1px solid red;
+            }
+
+            figure {
+                background-color: $white;
+                margin: 0 auto;
+                width: 100%;
+                max-height: 25rem;
+            }
+
+            section {
+                padding: 3rem 2rem;
+                box-shadow: $boxShadowSm;
+                border-radius: .5rem;
+                h2 {
+                    font-size: 1.5rem;
+                    padding: 1rem 0;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        aside {
+            nav {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                height: auto;
+                padding: 0 1rem 1rem 1rem;
+
+                li {
+                    a {
+                        padding: .5rem;
+                        font-size: 1rem;
+                        text-transform: capitalize;
+                        text-decoration: underline;
+
+                        &:hover {
+                            background-color: $primary;
+                        }
                     }
                 }
             }
@@ -789,7 +881,7 @@ section {
             .nav-socials {
                 justify-content: center;
                 text-align: center;
-                
+
                 a {
                     color: $white;
                 }
@@ -798,7 +890,7 @@ section {
             span {
                 display: block;
                 color: $white;
-                margin-top: .5rem;
+                margin-top: 0.5rem;
             }
         }
 
@@ -869,6 +961,12 @@ section {
                 & > .jobs-card {
                     flex: 45%;
                 }
+            }
+        }
+
+        .article-section {
+            & > div {
+                grid-template-columns: 3fr 1fr;
             }
         }
     }
@@ -956,7 +1054,7 @@ section {
         .story-section {
             .story-card {
                 .card-content {
-                    p {                    
+                    p {
                         width: 50%;
                         background-color: unset;
                         opacity: 1;
@@ -972,20 +1070,20 @@ section {
                 }
             }
         }
-    }   
+    }
 
     .app-footer {
         nav {
             flex-direction: row;
             justify-content: space-between;
-    
+
             .app-nav-left {
                 .nav-socials {
-                    justify-content: start;                
+                    justify-content: start;
                 }
-    
+
                 span {
-                    margin-top: .8rem;
+                    margin-top: 0.8rem;
                 }
             }
         }
