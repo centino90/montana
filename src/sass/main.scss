@@ -186,11 +186,20 @@ section {
 
     .companies-section {
         background-color: $white;
-        max-width: 77rem;
+        width: 100%;
         margin: 0 auto;
         padding: 3rem 2rem;
-        img {
-            width: 100%;
+        
+        .img-wrapper {
+            margin: 0 auto;
+            max-width: 77rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            img {
+                width: 100%;
+                object-fit: fill;
+            }
         }
     }
 
@@ -213,29 +222,28 @@ section {
                 object-fit: cover;
             }
         }
-        .message-content {
+
+        .message-article {
             @include vstack;
             align-items: center;
             flex: 1;
             background-color: lighten($primary, 6.5);
             padding: 3rem 4rem;
 
-            h1,
-            article {
-                max-width: 35rem;
-            }
             h1 {
                 font-size: 3.2rem;
+                max-width: 35rem;
             }
-            article {
+
+            .message-content {
+                max-width: 35rem;
                 border-left: 3px solid $black;
                 padding: 0.5rem 0 0.5rem 2rem;
-
-                p {
-                    font-size: 1.2rem;
-                }
-
-                footer {
+                p {        
+                    font-size: 1.2rem;                    
+                }  
+    
+                footer {                         
                     margin-top: 1rem;
                     text-transform: uppercase;
                     font-size: 1.2rem;
@@ -321,6 +329,39 @@ section {
         .hiring-actions {
             padding: 5rem 0;
             text-align: center;
+        }
+    }
+    
+    .talent-banner-section {
+        width: 100%;
+        padding: 4rem 2rem;
+        box-shadow: $boxShadowXXl;
+
+        .banner-message {
+            @include vstack;
+            align-items: center;
+            gap: 2rem;
+            max-width: 70rem;
+            padding: 1.2rem .5rem;
+            margin: 0 auto;     
+            
+            h1 {
+                text-transform: uppercase;
+                text-align: center;
+                font-size: 3.5rem;
+            }
+
+            p {
+                text-align: center;
+                width: 85%;
+                font-size: 1.3rem;
+            }
+
+            ul {
+                @include hstack;
+                gap: 1.5rem;
+                margin-top: 1rem;
+            }
         }
     }
 
